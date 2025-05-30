@@ -209,6 +209,17 @@ body {
   animation: scroll 30s linear infinite;
 }
 
+/* Faster animation on mobile devices */
+@media (max-width: 768px) {
+  .testimonials-slider {
+    animation: scroll 6s linear infinite;
+  }
+
+  [dir="rtl"] .testimonials-slider {
+    animation: scrollRTL 6s linear infinite;
+  }
+}
+
 .testimonials-slider.paused {
   animation-play-state: paused;
 }
