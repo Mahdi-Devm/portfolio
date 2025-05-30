@@ -53,7 +53,7 @@ function CircularSkill({
 
   return (
     <div
-      className={`group relative flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-background/50 to-background/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 ${
+      className={`group relative flex flex-col items-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-background/50 to-background/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 min-h-[200px] sm:min-h-[220px] ${
         isVisible ? "animate-in slide-in-from-bottom-8 fade-in" : "opacity-0"
       }`}
       style={{ animationDelay: `${delay}ms` }}
@@ -72,8 +72,11 @@ function CircularSkill({
       />
 
       {/* Circular Progress */}
-      <div className="relative mb-4">
-        <svg className="transform -rotate-90 w-24 h-24" viewBox="0 0 100 100">
+      <div className="relative mb-3 sm:mb-4">
+        <svg
+          className="transform -rotate-90 w-20 h-20 sm:w-24 sm:h-24"
+          viewBox="0 0 100 100"
+        >
           {/* Background circle */}
           <circle
             cx="50"
@@ -105,13 +108,17 @@ function CircularSkill({
         {/* Center content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div
-            className="text-2xl mb-1 transition-transform duration-300 group-hover:scale-110"
-            style={{ filter: `drop-shadow(0 0 4px ${color}60)` }}
+            className="text-xl sm:text-2xl mb-1 transition-transform duration-300 group-hover:scale-110 leading-none flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10"
+            style={{
+              filter: `drop-shadow(0 0 4px ${color}60)`,
+              fontFamily:
+                'system-ui, -apple-system, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif',
+            }}
           >
             {icon}
           </div>
           <span
-            className="text-lg font-bold transition-all duration-300"
+            className="text-base sm:text-lg font-bold transition-all duration-300 leading-none"
             style={{
               color: color,
               textShadow: `0 0 10px ${color}40`,
@@ -124,7 +131,7 @@ function CircularSkill({
 
       {/* Skill name */}
       <h3
-        className={`text-lg font-semibold text-center transition-all duration-300 group-hover:text-primary ${
+        className={`text-sm sm:text-lg font-semibold text-center transition-all duration-300 group-hover:text-primary leading-tight px-2 ${
           isRTL ? "text-right" : ""
         }`}
       >
@@ -221,7 +228,7 @@ export function Skills() {
       icon: "🎭",
       color: "#dfdfdf",
       delay: 800,
-    },  
+    },
     {
       name: "React Query",
       percentage: 85,
@@ -280,7 +287,7 @@ export function Skills() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -293,23 +300,25 @@ export function Skills() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 relative overflow-hidden"
+      className="py-16 sm:py-20 relative overflow-hidden"
       id="skills"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className={`text-center mb-16 ${isRTL ? "text-right" : ""}`}>
+        <div
+          className={`text-center mb-12 sm:mb-16 ${isRTL ? "text-right" : ""}`}
+        >
           <div className="inline-block">
             <h2
-              className={`text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent ${
+              className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent ${
                 isVisible
                   ? "animate-in slide-in-from-top-8 fade-in"
                   : "opacity-0"
@@ -327,7 +336,7 @@ export function Skills() {
             />
           </div>
           <p
-            className={`text-muted-foreground max-w-3xl mx-auto text-lg mt-6 ${
+            className={`text-muted-foreground max-w-3xl mx-auto text-base sm:text-lg mt-4 sm:mt-6 px-4 ${
               isVisible
                 ? "animate-in slide-in-from-bottom-4 fade-in"
                 : "opacity-0"
@@ -339,7 +348,7 @@ export function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {skills.map((skill, index) => (
             <CircularSkill
               key={index}
@@ -356,16 +365,18 @@ export function Skills() {
 
         {/* Additional decorative elements */}
         <div
-          className={`mt-16 text-center ${
+          className={`mt-12 sm:mt-16 text-center ${
             isVisible
               ? "animate-in slide-in-from-bottom-8 fade-in"
               : "opacity-0"
           }`}
           style={{ animationDelay: "800ms" }}
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
-            <span className="text-primary font-medium">🚀</span>
-            <span className="text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-primary font-medium text-lg sm:text-xl">
+              🚀
+            </span>
+            <span className="text-xs sm:text-sm font-medium">
               Always learning and growing
             </span>
           </div>
