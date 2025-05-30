@@ -240,7 +240,7 @@ export function Projects() {
       images: ["/image/tarkhine.png"],
       demoUrl: "https://tarkhineh-f6ib.vercel.app",
       codeUrl: "https://github.com/Mahdi-Devm/tarkhineh",
-      technologies: ["Next.js", "React", "CSS Modules", "API Integration"],
+      technologies: ["Next.js", "React", "CSS Modules", "TypeScript"],
       category: "Restaurant",
     },
     {
@@ -249,7 +249,7 @@ export function Projects() {
       images: ["/image/foodeking.png"],
       demoUrl: "https://github.com/MohamadHosein86-Dev/Foodking",
       codeUrl: "https://github.com/MohamadHosein86-Dev/Foodking",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      technologies: ["React", "Next.js", "TypeScript", "Express"],
       category: "E-commerce",
     },
     {
@@ -258,7 +258,13 @@ export function Projects() {
       images: ["/image/cospento.png"],
       demoUrl: "https://concepto.liara.run",
       codeUrl: "https://github.com/Mahdi-Devm/concepto",
-      technologies: ["Vue.js", "Nuxt.js", "SCSS", "Animation"],
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "React",
+        "Animation",
+        "TypeScript",
+      ],
       category: "Corporate",
     },
     {
@@ -267,7 +273,13 @@ export function Projects() {
       images: ["/image/UI-dashboard.png"],
       demoUrl: "https://github.com/Mahdi-Devm/UI-Dashboard",
       codeUrl: "https://github.com/Mahdi-Devm/UI-Dashboard",
-      technologies: ["React", "PDF Generation", "Tailwind CSS", "Chart.js"],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Next.js",
+        "TypeScript",
+        "Chart.js",
+      ],
       category: "Dashboard",
     },
 

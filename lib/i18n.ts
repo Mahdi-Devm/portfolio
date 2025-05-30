@@ -196,14 +196,14 @@ export const translations: Record<Language, Translations> = {
           "Creative portfolio website with modern animations and responsive design.",
       },
       cvBuilder: {
-        title: "CV Builder",
+        title: "Dashboard",
         description:
-          "Professional CV builder application with multiple templates and export options.",
+          "Professional Dashboard application with multiple templates and export options.",
       },
       cryptoTrading: {
         title: "Crypto Trading Platform",
         description:
-          "Cryptocurrency trading platform with real-time data and advanced charts.",
+          "Cryptocurrency trading platform with real-t  ime data and advanced charts.",
       },
       crashCoinCapital: {
         title: "Crash Coin Capital",
