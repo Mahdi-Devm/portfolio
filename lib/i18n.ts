@@ -186,9 +186,9 @@ export const translations: Record<Language, Translations> = {
           "Restaurant website with online ordering system and modern design.",
       },
       foodking: {
-        title: "FoodKing Platform",
+        title: "atrin",
         description:
-          "Food delivery platform with user-friendly interface and real-time tracking.",
+          "Platform selling clothing by implementing a structure like Instagram",
       },
       concepto: {
         title: "Concepto Portfolio",
@@ -329,9 +329,8 @@ export const translations: Record<Language, Translations> = {
         description: "وب‌سایت رستوران با سیستم سفارش آنلاین و طراحی مدرن.",
       },
       foodking: {
-        title: "پلتفرم FoodKing",
-        description:
-          "پلتفرم تحویل غذا با رابط کاربری دوستانه و ردیابی زمان واقعی.",
+        title: "atrin",
+        description: "پلت فرم فروش لباس با اجرای ساختاری مانند اینستاگرام",
       },
       concepto: {
         title: "نمونه کار Concepto",
