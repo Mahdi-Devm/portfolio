@@ -229,8 +229,8 @@ export function Projects() {
       title: t.projects.dashStack.title,
       description: t.projects.dashStack.description,
       images: ["/image/dashboard.png"],
-      demoUrl: "https://dash-stack-murex.vercel.app",
-      codeUrl: "https://github.com/Mahdi-Devm/dash-stack",
+      demoUrl: "https://dash-stack-murex.vercel.app/",
+      codeUrl: "https://github.com/Rezaabdollahi7/DashStack",
       technologies: [
         "React",
         "TypeScript",
